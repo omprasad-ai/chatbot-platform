@@ -1,0 +1,13 @@
+@Component
+public class JwtUtil {
+
+    private final String SECRET = "secretkey";
+
+    public String generateToken(String email) {
+        return Jwts.builder()
+                .setSubject(email)
+                .setIssuedAt(new Date())
+                .signWith(SignatureAlgorithm.HS256, SECRET)
+                .compact();
+    }
+}
