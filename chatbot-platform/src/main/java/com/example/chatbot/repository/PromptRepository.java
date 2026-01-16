@@ -1,1 +1,3 @@
-public interface PromptRepository extends JpaRepository<Prompt, Long> {}
+public interface PromptRepository extends JpaRepository<Prompt, Long> {
+    
+}

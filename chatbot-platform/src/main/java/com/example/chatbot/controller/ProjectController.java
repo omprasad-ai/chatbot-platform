@@ -8,7 +8,7 @@ public class ProjectController {
     }
 
     @PostMapping("/project")
-    public Project createProject(@RequestBody Project project) {
+    public Project create(@RequestBody Project project) {
         return repo.save(project);
     }
 }

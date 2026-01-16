@@ -1,1 +1,3 @@
-public interface ProjectRepository extends JpaRepository<Project, Long> {}
+public interface ProjectRepository extends JpaRepository<Project, Long> {
+    
+}

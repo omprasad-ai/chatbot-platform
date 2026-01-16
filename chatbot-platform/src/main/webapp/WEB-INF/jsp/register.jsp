@@ -7,5 +7,6 @@ Password: <input type="password" name="password">
 <button>Register</button>
 </form>
 
+
 </body>
 </html>

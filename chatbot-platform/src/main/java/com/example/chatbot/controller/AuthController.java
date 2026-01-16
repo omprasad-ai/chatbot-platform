@@ -21,9 +21,9 @@ public class AuthController {
 
     @PostMapping("/login")
     public String login(@RequestBody User user) {
-        User dbUser = repo.findByEmail(user.getEmail());
-        if (encoder.matches(user.getPassword(), dbUser.getPassword())) {
-            return jwt.generateToken(dbUser.getEmail());
+        User db = repo.findByEmail(user.getEmail());
+        if (encoder.matches(user.getPassword(), db.getPassword())) {
+            return jwt.generateToken(db.getEmail());
         }
         throw new RuntimeException("Invalid credentials");
     }
